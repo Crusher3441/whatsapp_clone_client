@@ -43,7 +43,7 @@ const Profile = () => {
     return (
         <>
         <ImageContainer>
-            <Image src={account.picture} alt="" />
+            <Image src={account.picture} alt="Profile Image" />
         </ImageContainer>
         <BoxWrapper>
             <Typography>Your name</Typography>
