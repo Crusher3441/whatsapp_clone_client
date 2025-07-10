@@ -35,14 +35,14 @@ const InputField = styled(InputBase)`
    font-size: 16px;
 `
 
-const Search = () => {
+const Search = ({ setText }) => {
     return(
         <Component>
             <Wrapper>
                 <Icon>
                     <SearchIcon/>
                 </Icon>
-                <InputField placeholder="Search or start new chat" />
+                <InputField placeholder="Search or start new chat" onChange={(e)=> setText(e.target.value)} />
             </Wrapper>
         </Component>
     )

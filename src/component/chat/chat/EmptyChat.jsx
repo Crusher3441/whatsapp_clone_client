@@ -2,7 +2,7 @@ import { Box , Typography ,styled, Divider} from "@mui/material";
 
 const Component = styled(Box)`
     height: 100vh;
-   
+    width: 110%;
     background-color: #f8f9fa;
     padding: 30px 0;
     text-align: center;
