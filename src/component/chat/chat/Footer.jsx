@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import {Mic,TagFacesOutlined,AttachFileOutlined} from '@mui/icons-material';
 import { Box , styled , InputBase} from '@mui/material';
 
@@ -35,14 +35,18 @@ const ClipIcon = styled(AttachFileOutlined)`
   transform: rotate(30deg);
 `
 
-const Footer = () =>{
+const Footer = ({sendText}) =>{
+  const [text,setText] = useState('')
+ 
+  
+
     return(
         <>
         <Component>
           <TagFacesOutlined/>
           <ClipIcon/>
           <Search>
-            <InputField placeholder='Type a message' />
+            <InputField placeholder='Type a message' onChange={(e)=>setText(e.target.value)} onKeyPress={(e)=>sendText(e)}/>
           </Search>
           <Mic/>
         </Component>  

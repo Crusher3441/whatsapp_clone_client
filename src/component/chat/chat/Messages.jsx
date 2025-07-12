@@ -1,5 +1,7 @@
+import { useContext } from "react"
 import { Box, styled } from "@mui/material"
 import Footer from "./Footer"
+import AccountContext from '../../../context/AccountProvider'
 
 const Wrapper = styled(Box)`
    
@@ -14,13 +16,28 @@ const Component = styled(Box)`
 `
 
 
-const Messages = () =>{
+const Messages = ({person}) =>{
+
+    const { account } = useContext(AccountContext)
+
+    const sendText = (e) =>{
+   
+        // const code = e.key
+        // if(code==="Enter"){
+        //     let message = {
+        //         senderId: account.sub,
+        //         receiverId: person.sub,
+        //         conversationId:
+        //     }
+        // }
+        }
+
     return(
         <Wrapper>
             <Component>
 
             </Component>
-            <Footer/>
+            <Footer sendText={sendText} />
         </Wrapper>
     )
 }
